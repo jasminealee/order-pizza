@@ -23,15 +23,12 @@ Pizza.prototype.assignToppingsId = function() {
   return this.toppingsId;
 }
 
-function SizeCost (size, cost)
+function SizeCostToppings (size, cost, toppings)
   this.size = size,
-  this.cost = cost
-
-function ToppingsCost (toppings, cost)
+  this.cost = cost,
   this.toppings = toppings,
-  this.cost = cost
 }
-Pizza.prototype.sizeCost = function() {
+Pizza.prototype.sizeCostToppings = function() {
     if (this.pizzaSize[0].size === "Small") {
         this.pizzaSize[0].cost = 5.00;
     } else if (this.pizzaSize[0].size === "Medium") {
