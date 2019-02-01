@@ -24,11 +24,23 @@ Pizza.prototype.assignToppingsId = function() {
 }
 
 function SizeCost (size, cost)
-  this.size,
-  this.cost
+  this.size = size,
+  this.cost = cost
+
+function ToppingsCost (toppings, cost)
+  this.toppings = toppings,
+  this.cost = cost
+}
+Pizza.prototype.sizeCost = function() {
+    if (this.pizzaSize[0].size === "Small") {
+        this.pizzaSize[0].cost = 5.00;
+    } else if (this.pizzaSize[0].size === "Medium") {
+        this.pizzaSize[0].cost = 7.00;
+    } else if (this.pizzaSize[0].size === "Large") {
+        this.pizzaSize[0].cost = 12.00;
+    };
 }
 
-if this pizza.size(size) === "small"
-    this pizza.sizeCost(size) === $5.00
+}
 $(document function(event))
-  ($("#order-pizza").click(function(){)
+  ($("#order-pizza").submit(function(){
