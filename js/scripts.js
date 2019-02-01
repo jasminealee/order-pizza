@@ -1,13 +1,12 @@
 function Pizza() {
   this.pizzaId = 0,
   this.pizzaSize = 0,
-  this.toppings = 0,
   this.toppingsId = 0,
   this.total = 0
 }
 
 Pizza.prototype.newPizzaId = function() {
-  this.pizzaId++;
+  this.pizzaId +=;
 }
 
 Pizza.prototype.newPizza = function() {
@@ -36,8 +35,8 @@ function SizeCostToppings (size, cost, toppings)
   this.toppings = toppings,
 }
 Pizza.prototype.sizeCostToppings = function() {
-    if (this.pizzaSize[0].size === "Small") {
-        this.pizzaSize[0].cost = 5.00;
+    if (this.pizzaSize.size === "Small") {
+        this.pizzaSize.cost = 5.00;
     } else if (this.pizzaSize[0].size === "Medium") {
         this.pizzaSize[0].cost = 7.00;
     } else if (this.pizzaSize[0].size === "Large") {
