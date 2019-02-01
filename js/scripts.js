@@ -20,4 +20,15 @@ Pizza.prototype.addToppings = function(toppings) {
 
 Pizza.prototype.assignToppingsId = function() {
   this.toppingsId +=1;
+  return this.toppingsId;
 }
+
+function SizeCost (size, cost)
+  this.size,
+  this.cost
+}
+
+if this pizza.size(size) === "small"
+    this pizza.sizeCost(size) === $5.00
+$(document function(event))
+  ($("#order-pizza").click(function(){)
