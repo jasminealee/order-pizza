@@ -1,9 +1,9 @@
 function Pizza() {
-  this.pizzaId = 0;
-  this.pizzaSize = 0;
-  this.toppings = 0;
-  this.toppingsId = 0;
-  this.total = 0;
+  this.pizzaId = 0,
+  this.pizzaSize = 0,
+  this.toppings = 0,
+  this.toppingsId = 0,
+  this.total = 0
 }
 
 Pizza.prototype.newPizzaId = function() {
