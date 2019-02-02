@@ -1,7 +1,6 @@
 function Pizza() {
   this.pizzaId = 0,
   this.pizzaSize = 0,
-  this.toppingsId = 0,
   this.total = 0
 }
 
@@ -20,20 +19,11 @@ Pizza.prototype.addSize = function(size) {
   this.pizzaSize.push(size)
 }
 
-Pizza.prototype.addToppings = function(toppings) {
-  this.pizzaToppings.push(toppings)
-}
-
-Pizza.prototype.assignToppingsId = function() {
-  this.toppingsId +=1;
-  return this.toppingsId;
-}
-
-function SizeCostToppings (size, cost, toppings)
+function SizeCostToppings (size, cost) {
   this.size = size,
-  this.cost = cost,
-  this.toppings = toppings,
+  this.cost = cost
 }
+
 Pizza.prototype.sizeCostToppings = function() {
     if (this.pizzaSize.size === "Small") {
         this.pizzaSize.cost = 5.00;
