@@ -5,3 +5,7 @@
 body {
   background-color: tan;
 }
+
+input {
+  display: block;
+}

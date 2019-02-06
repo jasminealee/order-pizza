@@ -1,38 +1,52 @@
 <!DOCTYPE html>
+<html>
   <head>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src = "js/jquery-3.3.1.js"></script>
-    <script src = "js/scripts.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src ="js/jquery-3.3.1.js"></script>
+    <script src ="js/scripts.js"></script>
     <title>Come Order Pizza!</title>
   </head>
   <body>
-    <h1>Create Your Personal Pizza</h1>
     <div class="container">
-      <div class=jumbotron>
+      <div class="jumbotron">
+        <h1>Customize Your Pizza!</h1>
 
-        <form id="order-pizza">
-          <div class="form-group1">
-            <p>Please select all the toppings you want</p>
-            <input type="checkbox" name="toppings" value="cheese">cheese<br>
-            <input type="checkbox" name="toppings" value="pepperoni">pepperoni<br>
-          </div>
+        <form id="customizePizza">
+
+          <label for="name">Please Enter Your Name:</label>
+          <input type="text" id="name" name="name">
           <br>
-          <div class="form-group2">
-            <p>Please select the size of pizza you want</p>
-            <input type="checkbox" name="size" value="small">small (8")<br>
-            <input type="checkbox" name="size" value="medium">medium (10")<br>
-            <input type="checkbox" name="size" value="large">large (12")<br>
-          </div>
+          <label for="email">Please Enter Your E-mail:</label>
+          <input type="text" id="email" name="email">
           <br>
-          <button class ="btn-primary">submit</button>
+          <label for="phoneNumber">Please Enter Your Phone Number:</label>
+          <input type="text" id="phoneNumber" name="phoneNumber">
+          <br>
+          <label for="topping">Topping: </label>
+          <select class="form-control" id="topping">
+            <option value="1">Cheese</option>
+            <option value="2">Pepperoni</option>
+          </select>
+          <br>
+          <label for="size">Size:</label>
+            <select class="form-control" id="size">
+
+              <option value="5"> small (8")</option>
+              <option value="8"> medium (10")</option>
+              <option value="10"> large (12")</option>
+            </select>
+          <br>
+          <button type = "submit" class ="btn-primary"><span class="submit">submit</span></button>
+
         </form>
+        <br>
+        <div class="total">
+        </div>
+        <br>
+        <img src="img/cheesepizza.jpeg">
+
       </div>
-
-
-          <img src="img/pizza.jpg">
-
-
     </div>
   </body>
 </html>
