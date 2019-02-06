@@ -1,42 +1,38 @@
-function Pizza() {
-  this.pizzaId = 0,
-  this.pizzaSize = 0,
-  this.total = 0
+//business logic//
+function Pizza(topping, size){
+  this.topping = topping,
+  this.size = size
 }
 
-Pizza.prototype.newPizzaId = function() {
-  this.pizzaId +=;
+Pizza.prototype.pizzaCost = function(){
+  var value = this.topping + this.size;
+
+  if (value === 12) {
+    return 20;
+  }
+  else if (value == 11) {
+    return 10;
+  }
+  else if (value == 10) {
+    return 9;
+  }
+  else if (value == 9) {
+    return 8;
+  }
+  else {
+    return 5;
+  }
 }
 
-Pizza.prototype.newPizza = function() {
-    if (this.toppings.length >= 0) {
-        this.toppingsId = 0;
-        this.pizzaSize = [];
-        this.total = 0;
-    };
 
-Pizza.prototype.addSize = function(size) {
-  this.pizzaSize.push(size)
-}
+//interface logic//
+$(document).ready(function() {
+  $("#customizePizza").submit(function(event) {
+    event.preventDefault();
+    var toppingInput = parseInt($("select#topping").val());
+    var sizeInput = parseInt($("select#size").val());
+    var pizza = new Pizza(toppingInput, sizeInput);
 
-function SizeCostToppings (size, cost) {
-  this.size = size,
-  this.cost = cost
-}
-
-Pizza.prototype.sizeCostToppings = function() {
-    if (this.pizzaSize.size === "Small") {
-        this.pizzaSize.cost = 5.00;
-    } else if (this.pizzaSize[0].size === "Medium") {
-        this.pizzaSize[0].cost = 7.00;
-    } else if (this.pizzaSize[0].size === "Large") {
-        this.pizzaSize[0].cost = 12.00;
-    } else {
-      return "I'm sorry. I'm not able to finalize your order."
-    }
-    };
-}
-
-}
-$(document function(event))
-  ($("#order-pizza").submit(function(){
+    $(".total").text(" Your total is $" + pizza.pizzaCost() + ". Your pizza will be ready for pick up in approximately 20 minutes.");
+  });
+});

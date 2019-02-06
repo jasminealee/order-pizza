@@ -5,3 +5,16 @@
 body {
   background-color: tan;
 }
+
+img {
+  padding-top: 50px;
+  width: 500px;
+}
+
+#customizePizza {
+  align-items: center;
+}
+
+input {
+  display: block;
+}
