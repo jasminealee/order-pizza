@@ -24,6 +24,7 @@ Pizza.prototype.pizzaCost = function(){
   }
 }
 
+<<<<<<< HEAD
 
 //interface logic//
 $(document).ready(function() {
@@ -34,5 +35,35 @@ $(document).ready(function() {
     var pizza = new Pizza(toppingInput, sizeInput);
 
     $(".total").text(" Your total is $" + pizza.pizzaCost() + ". Your pizza will be ready for pick up in approximately 20 minutes.");
+=======
+function Label(name){
+  this.name = name
+}
+
+Label.prototype.customerName = function(){
+  var name = this.name;
+
+  if (name){
+    return name + ", your";
+  }
+  else if (name == "") {
+    return "Your";
+  }
+}
+
+
+//interface logic//
+$(document).ready(function() {
+  $("#customizePizza").submit(function(event) {
+    event.preventDefault();
+    var nameInput = $("#name").val();
+    var user = parseInt($("#userInput").val());
+    var toppingInput = parseInt($("select#topping").val());
+    var sizeInput = parseInt($("select#size").val());
+    var pizza = new Pizza(toppingInput, sizeInput);
+    var label = new Label(nameInput);
+
+    $(".total").text(label.customerName() + " total is $" + pizza.pizzaCost() + ". Your pizza will be ready for pick up in 20 minutes.");
+>>>>>>> master
   });
 });
